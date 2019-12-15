@@ -8,5 +8,5 @@ class Table(models.Model):
     # Number
     index = models.IntegerField()
     # date
-    date = models.DateField()
+    add_date = models.DateField()
 

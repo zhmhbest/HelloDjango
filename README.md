@@ -2,7 +2,7 @@
 
 ## MVT
 - M: 模型，对应MVC的M，用于与数据库交互。
-- V: 试图，对应MVC的C，用于接受请求和响应数据。
+- V: 视图，对应MVC的C，用于接受请求和响应数据。
 - T: 模板，对应MVC的V，用于决定最终显示样式。
 
 
@@ -19,7 +19,6 @@ python manage.py startapp 应用名字
 ```BASH
 python manage.py runserver
 ```
-
 
 ## 目录说明
 
@@ -47,10 +46,11 @@ python manage.py runserver
     │
     └─templates
 
-## models.py
+## Module
 
 ### 设计模型
 ```PYTHON
+# main/models.py
 from django.db import models
 
 
@@ -61,7 +61,7 @@ class Table(models.Model):
     # Number
     index = models.IntegerField()
     # date
-    date = models.DateField()
+    add_date = models.DateField()
 ```
 
 ### 迁移文件
@@ -81,4 +81,24 @@ python manage.py migrate
 #       Applying ...
 #       Applying ...
 #       ...
+```
+### 模型使用
+#### 加入数据
+```PYTHON
+t = Table()
+t.name = "名字"
+t.index = 1
+t.add_date = date(1996, 10, 16)
+t.save()
+```
+#### 查询数据
+```PYTHON
+t = Table.objects.get(id=1)
+print(t)
+```
+#### 修改、删除数据
+```PYTHON
+t = Table.objects.get(id=1)
+t.save()  # 修改
+t.delete()  # 删除
 ```
