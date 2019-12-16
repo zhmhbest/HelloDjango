@@ -17,7 +17,7 @@ python manage.py startapp 应用名字
 ```
 ### 启动服务
 ```BASH
-python manage.py runserver
+python manage.py runserver [ip:port]
 ```
 
 ## 目录说明
@@ -52,6 +52,7 @@ python manage.py runserver
 [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
 
 ### 迁移文件
+
 #### 生成迁移文件
 ```BASH
 python manage.py makemigrations
@@ -69,23 +70,43 @@ python manage.py migrate
 #       Applying ...
 #       ...
 ```
+
 ### 模型使用
 #### 加入数据
 ```PYTHON
-t = Student()
-t.name = "名字"
-t.index = 1
-t.add_date = date(1996, 10, 16)
-t.save()
+stu = Student()
+stu.name = "名字"
+stu.number = 20195532
+stu.birthday = date(1998, 8, 23)
+stu.is_del = False
+stu.save()
 ```
 #### 查询数据
 ```PYTHON
-t = Student.objects.get(id=1)
-print(t)
+# 获得所有数据
+print(Student.objects.all())
+# 条件获取数据
+print(Student.objects.get(id=1))
+# 查询外键数据
+print(Student.computer_set.all())
 ```
-#### 修改、删除数据
+#### 修改数据
 ```PYTHON
-t = Student.objects.get(id=1)
-t.save()  # 修改
-t.delete()  # 删除
+stu = Student.objects.get(id=1)
+stu.name = "我被改了"
+stu.save()
+```
+#### 删除数据
+```PYTHON
+stu = Student.objects.get(id=1)
+stu.delete()    # 删除
+```
+
+### 可视化管理
+#### 语言本地化
+[HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
+```PYTHON
+LANGUAGE_CODE = 'zh-hans'
+
+TIME_ZONE = 'Asia/Shanghai'
 ```

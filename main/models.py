@@ -5,7 +5,7 @@ from django.db import models
 class Student(models.Model):
     # id: 自动添加，不需要手动设计
     name = models.CharField(max_length=20)
-    age = models.IntegerField()
+    number = models.IntegerField()
     birthday = models.DateField()
     is_del = models.BooleanField()
 
