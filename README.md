@@ -66,8 +66,8 @@ python manage.py createsuperuser
 #   ...\python.exe manage.py c  reatesuperuser
 #   用户名 (leave blank to use 'zhmhb'): zhmh
 #   电子邮件地址: zhmhbest@gmail.com
-#   Password:
-#   Password (again):
+#   Password: 1234
+#   Password (again): 1234
 #   密码长度太短。密码必须包含至少 8 个字符。
 #   这个密码太常见了。
 #   密码只包含数字。
