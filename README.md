@@ -137,3 +137,5 @@ stu.delete()    # 删除
 
 ### 注册模型到后台管理界面
 [main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
+
+## View
