@@ -1,13 +1,14 @@
 # Django
 
 
-<font color="hotpink"><h2>MVT</h2></font>
+
 ## MVT
 - M: 模型，对应MVC的M，用于与数据库交互。
 - V: 视图，对应MVC的C，用于接受请求和响应数据。
 - T: 模板，对应MVC的V，用于决定最终显示样式。
 
----
+
+
 ## Shell命令
 ### 创建项目
 ```BASH
@@ -22,7 +23,8 @@ python manage.py startapp 应用名字
 python manage.py runserver [ip:port]
 ```
 
----
+
+
 ## 目录说明
 
     Projects
@@ -49,7 +51,8 @@ python manage.py runserver [ip:port]
     │
     └─templates
 
----
+
+
 ## 可视化管理
 ### 语言本地化
 [HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
@@ -77,9 +80,9 @@ python manage.py createsuperuser
 http://127.0.0.1:8000/admin/
 ```
 
----
-## Module
 
+
+## Module
 ### 设计模型
 [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
 
