@@ -1,5 +1,7 @@
 # Django
 
+
+<font color="hotpink"><h2>MVT</h2></font>
 ## MVT
 - M: 模型，对应MVC的M，用于与数据库交互。
 - V: 视图，对应MVC的C，用于接受请求和响应数据。
