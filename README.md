@@ -1,11 +1,11 @@
-# Django
+<h1 style="color: gold">Django</h1>
 
-## MVT
+<h1 style="color: hotpink">MVT</h1>
 - M: 模型，对应MVC的M，用于与数据库交互。
 - V: 视图，对应MVC的C，用于接受请求和响应数据。
 - T: 模板，对应MVC的V，用于决定最终显示样式。
 
-
+---
 ## Shell命令
 ### 创建项目
 ```BASH
@@ -20,6 +20,7 @@ python manage.py startapp 应用名字
 python manage.py runserver [ip:port]
 ```
 
+---
 ## 目录说明
 
     Projects
@@ -46,6 +47,35 @@ python manage.py runserver [ip:port]
     │
     └─templates
 
+---
+## 可视化管理
+### 语言本地化
+[HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
+```PYTHON
+LANGUAGE_CODE = 'zh-hans'
+
+TIME_ZONE = 'Asia/Shanghai'
+```
+### 创建超级管理员
+```BASH
+python manage.py createsuperuser
+#   ...\python.exe manage.py c  reatesuperuser
+#   用户名 (leave blank to use 'zhmhb'): zhmh
+#   电子邮件地址: zhmhbest@gmail.com
+#   Password:
+#   Password (again):
+#   密码长度太短。密码必须包含至少 8 个字符。
+#   这个密码太常见了。
+#   密码只包含数字。
+#   Bypass password validation and create user anyway? [y/N]: y
+#   Superuser created successfully.
+```
+### 登录管理界面
+```
+http://127.0.0.1:8000/admin/
+```
+
+---
 ## Module
 
 ### 设计模型
@@ -102,11 +132,3 @@ stu = Student.objects.get(id=1)
 stu.delete()    # 删除
 ```
 
-### 可视化管理
-#### 语言本地化
-[HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
-```PYTHON
-LANGUAGE_CODE = 'zh-hans'
-
-TIME_ZONE = 'Asia/Shanghai'
-```
