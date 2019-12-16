@@ -9,7 +9,7 @@
 
 
 
-## Shell命令
+## 项目管理
 ### 创建项目
 ```BASH
 django-admin startproject 项目名字
@@ -31,22 +31,22 @@ python manage.py runserver [ip:port]
     │  db.sqlite3                       数据库文件
     │  manage.py                        管理Django站点
     │
-    ├─HelloDjango
+    ├─HelloDjango                       <项目名称>
     │      asgi.py
     │      settings.py                  项目配置文件
     │      urls.py                      URL路由配置
-    │      wsgi.py                      内置runserver命令的WSGI应用配置
+    │      wsgi.py                      WSGI应用配置
     │      __init__.py
     │
-    ├─main                              应用目录
+    ├─main                              <应用名称>
     │  │  admin.py                      网站后台管理
     │  │  apps.py
-    │  │  models.py                     设计和数据库中表对应的类
+    │  │  models.py                     数据库设计
     │  │  views.py                      接受请求、返回应答
-    │  │  tests.py                      写测试代码的文件
+    │  │  tests.py                      测试代码
     │  │  __init__.py
     │  │
-    │  └─migrations
+    │  └─migrations                     迁移文件目录
     │          __init__.py
     │
     └─templates
@@ -58,7 +58,6 @@ python manage.py runserver [ip:port]
 [HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
 ```PYTHON
 LANGUAGE_CODE = 'zh-hans'
-
 TIME_ZONE = 'Asia/Shanghai'
 ```
 ### 创建超级管理员
@@ -87,7 +86,6 @@ http://127.0.0.1:8000/admin/
 [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
 
 ### 迁移文件
-
 #### 生成迁移文件
 ```BASH
 python manage.py makemigrations
@@ -137,3 +135,9 @@ stu = Student.objects.get(id=1)
 stu.delete()    # 删除
 ```
 
+### 注册模型到后台管理界面
+[main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
+```PYTHON
+from main.models import Student
+admin.site.register(Student)
+```
