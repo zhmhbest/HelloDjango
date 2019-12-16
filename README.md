@@ -139,3 +139,26 @@ stu.delete()    # 删除
 [main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
 
 ## View
+### 创建接口
+[main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
+```PYTHON
+from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse
+# Create your views here.
+def index(request):
+    return HttpResponse("Hello!")
+
+```
+
+### 路由配置
+[HelloDjango/urls.py#22](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/urls.py#L22)
+```PYTHON
+...
+import <app_name>.views
+...
+urlpatterns = [
+    ...
+    path('<url_path>/', <app_name>.views.<interface_name>),
+]
+
+```
