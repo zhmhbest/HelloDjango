@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+<h1>{{ headline }}</h1>
+
+<p>直接输出列表{{ range }}</p>
+<ul>
+    {% for i in range %}
+    <li>第{{ i }}个</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -82,7 +82,7 @@ http://127.0.0.1:8000/admin/
 
 
 ## Module
-### 设计模型
+### 设计数据库模型
 [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
 
 ### 迁移文件
@@ -141,24 +141,14 @@ stu.delete()    # 删除
 ## View
 ### 创建接口
 [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
-```PYTHON
-from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse
-# Create your views here.
-def index(request):
-    return HttpResponse("Hello!")
-
-```
 
 ### 路由配置
 [HelloDjango/urls.py#22](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/urls.py#L22)
-```PYTHON
-...
-import <app_name>.views
-...
-urlpatterns = [
-    ...
-    path('<url_path>/', <app_name>.views.<interface_name>),
-]
 
-```
+### 模板文件
+#### 设置模板文件目录
+[HelloDjango/settings.py#58](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L58)
+
+#### 使用模板
+[main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
+[templates/main/index.html](https://github.com/zhmhbest/HelloDjango/blob/master/templates/main/index.html)
