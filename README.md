@@ -1,6 +1,6 @@
-<h1 style="color: gold">Django</h1>
+# Django
 
-<h1 style="color: hotpink">MVT</h1>
+## MVT
 - M: 模型，对应MVC的M，用于与数据库交互。
 - V: 视图，对应MVC的C，用于接受请求和响应数据。
 - T: 模板，对应MVC的V，用于决定最终显示样式。
