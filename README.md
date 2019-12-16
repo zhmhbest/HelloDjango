@@ -49,20 +49,7 @@ python manage.py runserver
 ## Module
 
 ### 设计模型
-```PYTHON
-# main/models.py
-from django.db import models
-
-
-# Create your models here.
-class Table(models.Model):
-    # varchar(20)
-    name = models.CharField(max_length=20)
-    # Number
-    index = models.IntegerField()
-    # date
-    add_date = models.DateField()
-```
+[main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
 
 ### 迁移文件
 #### 生成迁移文件
@@ -85,7 +72,7 @@ python manage.py migrate
 ### 模型使用
 #### 加入数据
 ```PYTHON
-t = Table()
+t = Student()
 t.name = "名字"
 t.index = 1
 t.add_date = date(1996, 10, 16)
@@ -93,12 +80,12 @@ t.save()
 ```
 #### 查询数据
 ```PYTHON
-t = Table.objects.get(id=1)
+t = Student.objects.get(id=1)
 print(t)
 ```
 #### 修改、删除数据
 ```PYTHON
-t = Table.objects.get(id=1)
+t = Student.objects.get(id=1)
 t.save()  # 修改
 t.delete()  # 删除
 ```
