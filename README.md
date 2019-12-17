@@ -2,10 +2,12 @@
 
 
 
+
 ## MVT
 - M: 模型，对应MVC的M，用于与数据库交互。
 - V: 视图，对应MVC的C，用于接受请求和响应数据。
 - T: 模板，对应MVC的V，用于决定最终显示样式。
+
 
 
 
@@ -22,6 +24,7 @@ python manage.py startapp 应用名字
 ```BASH
 python manage.py runserver [ip:port]
 ```
+
 
 
 
@@ -53,6 +56,7 @@ python manage.py runserver [ip:port]
 
 
 
+
 ## 可视化后台管理
 ### 语言本地化
 - [HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
@@ -81,10 +85,10 @@ http://127.0.0.1:8000/admin/
 
 
 
+
 ## Module
 ### 设计数据库模型
 - [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
-
 ### 迁移文件
 #### 生成迁移文件
 ```BASH
@@ -103,13 +107,13 @@ python manage.py migrate
 #       Applying ...
 #       ...
 ```
-
 ### 模型使用
-- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L44)
-
-
+- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L55)
 ### 注册模型到后台管理界面
 - [main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
+
+
+
 
 ## View
 ### 创建接口
@@ -120,10 +124,10 @@ python manage.py migrate
 
 
 
+
 ## Template
 ### 设置模板文件目录
 - [HelloDjango/settings.py#58](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L58)
-
 ### 使用模板
 - [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L44)
 - [templates/main/index.html](https://github.com/zhmhbest/HelloDjango/blob/master/templates/main/index.html)
