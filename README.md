@@ -55,7 +55,7 @@ python manage.py runserver [ip:port]
 
 ## 可视化后台管理
 ### 语言本地化
-[HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
+- [HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
 ```PYTHON
 LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
@@ -83,7 +83,7 @@ http://127.0.0.1:8000/admin/
 
 ## Module
 ### 设计数据库模型
-[main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
+- [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
 
 ### 迁移文件
 #### 生成迁移文件
@@ -105,50 +105,25 @@ python manage.py migrate
 ```
 
 ### 模型使用
-#### 加入数据
-```PYTHON
-stu = Student()
-stu.name = "名字"
-stu.number = 20195532
-stu.birthday = date(1998, 8, 23)
-stu.is_del = False
-stu.save()
-```
-#### 查询数据
-```PYTHON
-# 获得所有数据
-print(Student.objects.all())
-# 条件获取数据
-print(Student.objects.get(id=1))
-# 查询外键数据
-print(Student.computer_set.all())
-```
-#### 修改数据
-```PYTHON
-stu = Student.objects.get(id=1)
-stu.name = "我被改了"
-stu.save()
-```
-#### 删除数据
-```PYTHON
-stu = Student.objects.get(id=1)
-stu.delete()    # 删除
-```
+- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L44)
+
 
 ### 注册模型到后台管理界面
-[main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
+- [main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
 
 ## View
 ### 创建接口
-[main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
+- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L10)
 
 ### 路由配置
-[HelloDjango/urls.py#22](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/urls.py#L22)
+- [HelloDjango/urls.py#22](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/urls.py#L22)
 
-### 模板文件
-#### 设置模板文件目录
-[HelloDjango/settings.py#58](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L58)
 
-#### 使用模板
-[main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
-[templates/main/index.html](https://github.com/zhmhbest/HelloDjango/blob/master/templates/main/index.html)
+
+## Template
+### 设置模板文件目录
+- [HelloDjango/settings.py#58](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L58)
+
+### 使用模板
+- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L44)
+- [templates/main/index.html](https://github.com/zhmhbest/HelloDjango/blob/master/templates/main/index.html)

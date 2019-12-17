@@ -50,3 +50,30 @@ def second(request):
         'headline': '模板使用Demo',
         'range': list(range(10))
     })
+
+
+def third(request):
+    import random
+    from main.models import Student
+
+    # 添加数据
+    stu = Student()
+    stu.name = "名字"
+    stu.number = random.randint(1000, 9999)
+    stu.birthday = '1998-8-23'
+    stu.is_del = False
+    stu.save()
+
+    # 查询数据
+    print(Student.objects.all())
+    stu = Student.objects.get(id=1)
+    print(stu)
+    # print(Student.computer_set.all())
+
+    # 修改数据
+    stu.name = "修改"
+    stu.save()
+
+    # 删除数据
+    # stu.delete()
+    return HttpResponse("Success!")
