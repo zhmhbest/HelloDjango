@@ -11,24 +11,24 @@
 
 
 
-## 项目管理
+## manage.py
 ### 创建项目
-```BASH
+```
 django-admin startproject 项目名字
 ```
 ### 创建应用
-```BASH
+```
 python manage.py startapp 应用名字
 ```
 ### 启动服务
-```BASH
+```
 python manage.py runserver [ip:port]
 ```
 
 
 
 
-## 目录说明
+## Index
 
     Projects
     │  db.sqlite3                       数据库文件
@@ -57,15 +57,58 @@ python manage.py runserver [ip:port]
 
 
 
-## 可视化后台管理
+## Settings
+- [HelloDjango/settings.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py)
+### 注册应用
+```python
+INSTALLED_APPS = [
+    # 注册应用
+    'main.apps.MainConfig', 
+]
+```
+
+### 数据库配置
+```python
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# ...
+# ...
+# ...
+DATABASES = {
+    'default': {
+        # 【sqlite】
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        
+        # 【mysql】
+        # pip install pymysql
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '${数据库名}',
+        'USER': '${数据库登录用户名}',
+        'PASSWORD': '${数据库登录密码}',
+        'HOST': 'localhost',
+        'PORT': 3306,
+    }
+}
+```
+#### app/\_\_init\_\_.py
+```python
+import pymysql
+pymysql.install_as_MySQLdb()
+```
+
 ### 语言本地化
-- [HelloDjango/settings.py#105](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L105)
-```PYTHON
+```python
 LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
 ```
+
+
+
+
+## 可视化后台管理
 ### 创建超级管理员
-```BASH
+```
 python manage.py createsuperuser
 #   ...\python.exe manage.py c  reatesuperuser
 #   用户名 (leave blank to use 'zhmhb'): zhmh
@@ -91,14 +134,14 @@ http://127.0.0.1:8000/admin/
 - [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
 ### 迁移文件
 #### 生成迁移文件
-```BASH
+```
 python manage.py makemigrations
 #   Migrations for 'main':
 #   main\migrations\0001_initial.py
 #       - Create model Table
 ```
 #### 执行迁移文件
-```BASH
+```
 python manage.py migrate
 #   Operations to perform:
 #       Apply all migrations: admin, auth, contenttypes, main, sessions
@@ -108,7 +151,7 @@ python manage.py migrate
 #       ...
 ```
 ### 模型使用
-- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L55)
+- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
 ### 注册模型到后台管理界面
 - [main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
 
@@ -117,17 +160,17 @@ python manage.py migrate
 
 ## View
 ### 创建接口
-- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L10)
+- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
 
 ### 路由配置
-- [HelloDjango/urls.py#22](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/urls.py#L22)
+- [HelloDjango/urls.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/urls.py)
 
 
 
 
 ## Template
 ### 设置模板文件目录
-- [HelloDjango/settings.py#58](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py#L58)
+- [HelloDjango/settings.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py)
 ### 使用模板
-- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py#L44)
+- [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
 - [templates/main/index.html](https://github.com/zhmhbest/HelloDjango/blob/master/templates/main/index.html)
