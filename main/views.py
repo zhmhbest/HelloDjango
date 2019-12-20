@@ -74,7 +74,8 @@ def second(request):
     return render(request, '../templates/main/index.html', {
         'title': '标题',
         'headline': '模板使用Demo',
-        'range': list(range(10))
+        'range1': list(range(10)),
+        'dict1': {'a': 'Apple', 'b': 'Banana', 2: '200'}
     })
 
 
@@ -94,10 +95,10 @@ def third(request):
     print(Student.objects.all())
     stu = Student.objects.get(id=1)
     print(stu)
-    stu = Student.objects.filter(id=1)
-    print(stu)
-    stu = Student.objects.exclude(id=1)
-    print(stu)
+    # stu = Student.objects.filter(id=1)
+    # print(stu)
+    # stu = Student.objects.exclude(id=1)
+    # print(stu)
     # print(Student.computer_set.all())
 
     # 修改数据

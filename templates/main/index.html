@@ -8,12 +8,15 @@
 
 <h1>{{ headline }}</h1>
 
-<p>直接输出列表{{ range }}</p>
+<p>直接输出列表{{ range1 }}</p>
 <ul>
-    {% for i in range %}
+    {% for i in range1 %}
     <li>第{{ i }}个</li>
     {% endfor %}
 </ul>
 
+<h3>{{ dict1.a }}</h3>
+<h3>{{ dict1.b }}</h3>
+<h3>{{ dict1.2 }}</h3>
 </body>
 </html>
