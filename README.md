@@ -56,7 +56,7 @@ python manage.py runserver [ip:port]
 
 
 
-
+<br><br><br><br>
 ## Settings
 - [HelloDjango/settings.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py)
 ### 注册应用
@@ -91,7 +91,7 @@ DATABASES = {
     }
 }
 ```
-#### app/\_\_init\_\_.py
+#### main/\_\_init\_\_.py
 ```python
 import pymysql
 pymysql.install_as_MySQLdb()
