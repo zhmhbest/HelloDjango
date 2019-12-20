@@ -1,16 +1,14 @@
 # Django
-
-
-
-
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+&nbsp;<br><br><br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## MVT
 - M: 模型，对应MVC的M，用于与数据库交互。
 - V: 视图，对应MVC的C，用于接受请求和响应数据。
 - T: 模板，对应MVC的V，用于决定最终显示样式。
-
-
-
-
+&nbsp;<br>&nbsp;
+&nbsp;<br>&nbsp;
+&nbsp;<br>&nbsp;
 ## manage.py
 ### 创建项目
 ```
@@ -24,10 +22,9 @@ python manage.py startapp 应用名字
 ```
 python manage.py runserver [ip:port]
 ```
-
-
-
-
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+&nbsp;<br><br><br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## Index
 
     Projects
@@ -53,9 +50,9 @@ python manage.py runserver [ip:port]
     │          __init__.py
     │
     └─templates
-&nbsp;<br>&nbsp;
-&nbsp;<br>&nbsp;
-&nbsp;<br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+&nbsp;<br><br><br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## Settings
 - [HelloDjango/settings.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py)
 ### 注册应用
@@ -101,10 +98,9 @@ pymysql.install_as_MySQLdb()
 LANGUAGE_CODE = 'zh-hans'
 TIME_ZONE = 'Asia/Shanghai'
 ```
-
-
-
-
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+&nbsp;<br><br><br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## 可视化后台管理
 ### 创建超级管理员
 ```
@@ -124,10 +120,9 @@ python manage.py createsuperuser
 ```
 http://127.0.0.1:8000/admin/
 ```
-
-
-
-
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+&nbsp;<br><br><br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## Module
 ### 设计数据库模型
 - [main/models.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/models.py)
@@ -153,20 +148,18 @@ python manage.py migrate
 - [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
 ### 注册模型到后台管理界面
 - [main/admin.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/admin.py)
-
-
-
-
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+&nbsp;<br><br><br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## View
 ### 创建接口
 - [main/views.py](https://github.com/zhmhbest/HelloDjango/blob/master/main/views.py)
 
 ### 路由配置
 - [HelloDjango/urls.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/urls.py)
-
-
-
-
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
+&nbsp;<br><br><br>&nbsp;
+<!-- ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ -->
 ## Template
 ### 设置模板文件目录
 - [HelloDjango/settings.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py)
