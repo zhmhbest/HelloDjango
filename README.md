@@ -53,10 +53,10 @@ python manage.py runserver [ip:port]
     │          __init__.py
     │
     └─templates
->- &nbsp;
->- &nbsp;
->- &nbsp;
->- &nbsp;
+>&nbsp;<br>&nbsp;
+>&nbsp;<br>&nbsp;
+>&nbsp;<br>&nbsp;
+>&nbsp;<br>&nbsp;
 ## Settings
 - [HelloDjango/settings.py](https://github.com/zhmhbest/HelloDjango/blob/master/HelloDjango/settings.py)
 ### 注册应用
